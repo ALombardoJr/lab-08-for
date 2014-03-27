@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+var people = parseInt(prompt("How many people?"));
+var cost = parseInt(prompt("How much did it cost?"));
+if (people < 6) {
+var service = prompt("How was the service (terrible, poor, ok, good, great)?");
+switch (service)
+{
+	case "terrible":
+	console.log("You dont have to tip anything");
+	break;
+	case "poor":
+	cost = cost * .10;
+	console.log("You should probably tip " + cost + "!");
+	break;
+	case "ok":
+	cost = cost * .15;
+	console.log("You should probably tip " + cost + "!");
+	break;
+	case "good":
+	cost = cost * .20;
+	console.log("You should probably tip " + cost + "!");
+	break;
+	case "great":
+	cost = cost * .25;
+	console.log("You should probably tip " + cost + "!");
+	break;
+	default:
+	cost = cost * .15;
+	console.log("Couldnt understand " + service + " service; default 15 percent");
+	console.log("You should probably tip " + cost + "!");
+
+}
+}
+ else {
+	cost = cost * .20;
+	console.log("You should probably tip " + cost + "!");
+}
+
+</script>
+</body>
+</html>
